@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller2-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <viewController id="BYZ-38-t0r" customClass="ViewController2" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Clg-VP-6og">
+                                <rect key="frame" x="0.0" y="20" width="600" height="180"/>
+                                <color key="backgroundColor" red="0.1215686275" green="0.29411764709999999" blue="0.49803921569999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="GZO-KS-WZU">
+                                    <size key="itemSize" width="100" height="100"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CollectionViewCell2" id="A8F-n2-8Jw" customClass="CollectionViewCell2">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wK4-57-nGn">
+                                                    <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="wK4-57-nGn" secondAttribute="trailing" id="AGT-X3-7Yf"/>
+                                            <constraint firstAttribute="bottom" secondItem="wK4-57-nGn" secondAttribute="bottom" id="KCi-Pz-k0n"/>
+                                            <constraint firstItem="wK4-57-nGn" firstAttribute="leading" secondItem="A8F-n2-8Jw" secondAttribute="leading" id="VXh-yu-Yqb"/>
+                                            <constraint firstItem="wK4-57-nGn" firstAttribute="top" secondItem="A8F-n2-8Jw" secondAttribute="top" id="qC0-v4-LfA"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="imageView" destination="wK4-57-nGn" id="Akh-xe-Ch4"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="jdP-87-Kju"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="QaM-qX-lhi"/>
+                                </connections>
+                            </collectionView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="Egj-gU-iJ4">
+                                <rect key="frame" x="541" y="163" width="39" height="37"/>
+                                <color key="pageIndicatorTintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="currentPageIndicatorTintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            </pageControl>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Clg-VP-6og" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Xnl-zz-Qlw"/>
+                            <constraint firstItem="Clg-VP-6og" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.3" id="feZ-FS-D4j"/>
+                            <constraint firstAttribute="trailing" secondItem="Egj-gU-iJ4" secondAttribute="trailing" constant="20" id="lGm-DB-AcH"/>
+                            <constraint firstAttribute="trailing" secondItem="Clg-VP-6og" secondAttribute="trailing" id="nXj-H0-Vf6"/>
+                            <constraint firstItem="Clg-VP-6og" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="xYm-Bi-qtM"/>
+                            <constraint firstItem="Egj-gU-iJ4" firstAttribute="bottom" secondItem="Clg-VP-6og" secondAttribute="bottom" id="yFs-26-qhj"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="Clg-VP-6og" id="j5N-bP-Y6P"/>
+                        <outlet property="pageControl" destination="Egj-gU-iJ4" id="kIL-kD-6wA"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="317" y="389"/>
+        </scene>
+    </scenes>
+</document>
